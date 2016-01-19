@@ -11,7 +11,7 @@ If they don’t see what they are looking for, they can submit a question via a 
 Features:
 -------------------------
 
-•	Add question form on PDP page to allow customer to ask questions related to the product
+•	Add question form on PDP page to allow customer to ask questions related to the product 
 •	Adds list of the Frequently Asked Questions on the PDP page (accordion)
 •	Allows site administrator to create Question Groups
 •	Allows site administrator to easily answer and approve questions and assign them to Question Group.
