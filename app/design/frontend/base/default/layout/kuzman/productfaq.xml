@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * @author	    Vladan Kuzmanovic (vladankuzmanovic@gmail.com)
+ */
+-->
+<layout version="0.1.0">
+	<catalog_product_view>
+		<reference name="head">
+				<action method="addItem"><type>skin_js</type><name>kuzman/productfaq/js/productfaq.js</name></action>
+                <action method="addItem"><type>js</type><name>kuzman/jquery-1.11.2.min.js</name></action>
+                <action method="addItem"><type>js</type><name>kuzman/no-conflict.js</name></action>
+                <action method="addItem"><type>js</type><name>kuzman/jquery-ui.min.js</name></action>
+				<action method="addCss"><stylesheet>kuzman/productfaq/css/productfaq.css</stylesheet></action>
+                <action method="addCss"><stylesheet>kuzman/productfaq/css/jquery-ui.css</stylesheet></action>
+		</reference>
+		<reference name="product.info">
+            <block type="kproductfaq/productfaqTab" name="product.faq.tab" as="product.faq.tab" template="kuzman/productfaq/productfaqTab.phtml">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value"><value>FAQ</value></action>
+            </block>
+		</reference>
+	</catalog_product_view>
+</layout>

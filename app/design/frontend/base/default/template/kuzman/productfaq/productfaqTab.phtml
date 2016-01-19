@@ -1,0 +1,25 @@
+<?php
+/**
+ * @author	    Vladan Kuzmanovic (vladankuzmanovic@gmail.com)
+ */
+?>
+<?php $productId= $this->getProduct()->getId();?>
+<?php $groupsCollection= $this->getGroupCollection();?>
+<div id="accordion">
+<?php foreach ($groupsCollection as $groups):?>
+    <?php $faqjCollection=$this->getQuestionProductCollection($groups->getGroupId(), $productId);?>
+    <?php if(count($faqjCollection)>0):?>
+        <h3><?php echo $this->getGroupName($this->getStoreId(), $groups->getGroupId());?></h3>
+        <div>
+            <?php foreach ($faqjCollection as $faqj): ?>
+                <p class ="qlabel"><?php echo $this->__('Question:')?> </p><p class="question"><?php echo $faqj['question'];?></p>
+                <p class ="alabel"><?php echo $this->__('Answer:')?> </p><p class="answer"><?php echo $faqj['answer'];?></p>
+            <?php endforeach; ?>
+        </div><br/><br>
+    <?php endif;?>
+<?php endforeach;?>
+</div>
+<a href="javascript:void(0)" class="submit-question"><?php echo $this->__('Ask Your Question') ?></a>
+<div style="clear:both;"></div>
+
+<?php echo $this->getLayout()->createBlock('kproductfaq/questionform')->setTemplate('kuzman/productfaq/questionform.phtml')->toHtml(); ?>

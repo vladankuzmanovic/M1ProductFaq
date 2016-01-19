@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @author	    Vladan Kuzmanovic (vladankuzmanovic@gmail.com)
+ */
+-->
+<config>
+    <modules>
+        <Kuzman_ProductFaq>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kuzman_ProductFaq>
+    </modules>
+</config>

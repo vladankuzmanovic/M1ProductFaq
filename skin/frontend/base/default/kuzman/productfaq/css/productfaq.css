@@ -1,0 +1,71 @@
+#question-form-container{
+	margin-top:20px;
+}
+#question-form-container .form-list input.input-text, #question-form-container .form-list textarea{
+	width: 358px;
+}
+#question-form-container .form-list label{
+	float:none;
+}
+.product-collateral .tab-container .answer, .box-productfaq .answer {
+	margin: 0 0 10px 20px;
+}
+.product-collateral .tab-container .question, .box-productfaq .question{
+	margin: 0 0 0 20px;
+}
+.box-productfaq #question-form-container .productfaq-box{
+	border-bottom: 1px solid #CFCFCF;
+}
+.box-productfaq #question-form-container .question-answer{
+	width:77%;
+	float:right;
+	padding: 10px 10px 10px 0;
+}
+.question-answer h3{
+	width:13%;
+	float:left;
+	}
+.question-answer p{
+	width:84%;
+	float:right;
+}
+.box-productfaq #question-form-container .submit-question{
+	float:right;
+	font-size:14px;
+	padding:20px;
+}
+.box-productfaq #question-form-container .form-list label {
+    color: #444444;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 15px 0 0;
+    text-align: right;
+    width: 225px;
+}
+/* .box-productfaq #question-form-container .form-list li{ */
+/* 	margin:0 0 9px; */
+/* 	} */
+.box-productfaq	#question-form-container .buttons-set{
+	width:620px;
+	}
+.box-productfaq #question-form-container .form-list input.input-text,.box-productfaq #question-form-container .form-list textarea{
+	width:374px;
+}
+
+#question-form-container .productfaq_ajax_loader{
+	float:right;
+	margin-top:5px;
+	margin-left:5px;
+}
+.tab-container .tab-content a.submit-question{
+    float: right;
+    font-size: 20px;
+    margin: 10px;
+}
+.ui-accordion-content{height:200px}
+
+.product-collateral .tab-container .qlabel, .product-collateral .tab-container .alabel{
+    color: #3399cc;
+    text-decoration: underline;
+}

@@ -1,0 +1,34 @@
+<?php
+/**
+ * @author	    Vladan Kuzmanovic (vladankuzmanovic@gmail.com)
+ */
+?>
+<?php $customerFullname = $this->getCurrentCustomerName();?>
+<div id="question-form-container" style="display:none;">
+	<ul class="form-list">
+		<li>
+			<label for="nickname_field" class="required"><em>*</em><?php echo $this->__('Nickname') ?></label>
+			<div class="input-box nick">
+				<input type="text" name="nickname" id="nickname_field" class="input-text" value="<?php echo $customerFullname;?>" />
+			</div>
+		</li>
+		<li>
+			<label for="question_field" class="required"><em>*</em><?php echo $this->__('Question') ?></label>
+			<div class="input-box quest">
+				<textarea name="detail" id="question_field" cols="5" rows="3" class="input-text"></textarea>
+			</div>
+		</li>
+        <span class="productfaq_ajax_loader" style="display: none;"><img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" /></span>
+	</ul>
+	<div class="buttons-set">
+
+		<button id="submitButtonId" type="button" title="<?php echo $this->__('Submit Question') ?>" class="button"><span><span><?php echo $this->__('Submit Question') ?></span></span></button>		
+	</div>
+	
+	<input type="hidden"  id="product_id_field" value="<?php echo $this->getProduct()->getId();?>" />
+	<input type="hidden"  id="product_name_field" value="<?php echo $this->getProduct()->getName();?>" />
+</div>
+
+<script>
+	var baseurl='<?php echo $this->getUrl(); ?>';
+</script>

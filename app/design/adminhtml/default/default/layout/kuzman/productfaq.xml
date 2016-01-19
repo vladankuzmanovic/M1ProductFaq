@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * @author	    Vladan Kuzmanovic (vladankuzmanovic@gmail.com)
+ */
+-->
+<layout version="0.1.0">
+    <kproductfaq_adminhtml_productfaq_index>
+        <reference name="content">
+            <block type="kproductfaq/adminhtml_productfaq" name="productfaq" />
+        </reference>
+    </kproductfaq_adminhtml_productfaq_index>
+
+	<kproductfaq_adminhtml_productfaq_product>
+       <block type="core/text_list" name="root" output="toHtml">
+           <block type="kproductfaq/adminhtml_productfaq_edit_tab_products" name="product.grid"/>
+           <block type="adminhtml/widget_grid_serializer" name="grid_serializer">
+               <reference name="grid_serializer">
+                   <action method="initSerializerBlock">
+                       <grid_block_name>product.grid</grid_block_name>
+                       <data_callback>getSelectedProducts</data_callback>
+                       <hidden_input_name>links[products]</hidden_input_name>
+                       <reload_param_name>products</reload_param_name>
+                   </action>
+                   <action method="addColumnInputName">
+                       <input_name>position</input_name>
+                   </action>
+               </reference>
+           </block>
+       </block>
+   </kproductfaq_adminhtml_productfaq_product>
+   
+   <kproductfaq_adminhtml_productfaq_productgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="kproductfaq/adminhtml_productfaq_edit_tab_products" name="product.grid"/>
+        </block>
+	</kproductfaq_adminhtml_productfaq_productgrid>
+	
+	<kproductfaq_adminhtml_faqgroups_index>
+        <reference name="content">
+            <block type="kproductfaq/adminhtml_faqgroups" name="faqgroups" />
+        </reference>
+    </kproductfaq_adminhtml_faqgroups_index>
+</layout>
